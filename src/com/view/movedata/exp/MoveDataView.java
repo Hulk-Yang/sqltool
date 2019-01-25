@@ -105,7 +105,7 @@ public class MoveDataView extends JPanel{
 	private Label toTableName;
 	private JComboBox showType;
 	
-	private JFileChooser fileChooser = new JFileChooser("D:\\");
+	private JFileChooser fileChooser = new JFileChooser();
 
 	private boolean isEdit;
 	public MoveDataView(){

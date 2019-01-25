@@ -133,7 +133,7 @@ public class ExpDialog extends JDialog {
 			}
 		});
 
-		final JFileChooser fileChooser = new JFileChooser("D:\\");
+		final JFileChooser fileChooser = new JFileChooser();
 	
 		fileChooser.setAcceptAllFileFilterUsed(false);
 		fileChooser.setApproveButtonText("È·¶¨");

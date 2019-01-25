@@ -1,8 +1,7 @@
 package com.prompt;
 
 import java.awt.Color;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -15,8 +14,6 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
-import com.dao.Dao;
-
 public class DBKeyWords {
 	private HashMap<String, MutableAttributeSet> keywords;
 	private HashMap<String, MutableAttributeSet> redisKeywords;
@@ -26,9 +23,9 @@ public class DBKeyWords {
 	private MutableAttributeSet funWord;
 	private MutableAttributeSet normalAttr;
 	private static DBKeyWords dbKeyWords ;
-	private final String prompKeyWordsPath =System.getProperty("user.dir")+"\\config\\keywords.xml";
-	private final String prompRedisKeyWordsPath =System.getProperty("user.dir")+"\\config\\rediskeywords.xml";
-	private final String prompFunctionPath =System.getProperty("user.dir")+"\\config\\prompt.xml";
+	private final String prompKeyWordsPath =System.getProperty("user.dir")+File.separator+"config"+File.separator+"keywords.xml";
+	private final String prompRedisKeyWordsPath =System.getProperty("user.dir")+""+File.separator+"config"+File.separator+"rediskeywords.xml";
+	private final String prompFunctionPath =System.getProperty("user.dir")+""+File.separator+"config"+File.separator+"prompt.xml";
 	private  DBKeyWords(){
 		keywords = new HashMap<String, MutableAttributeSet>();
 		redisKeywords = new HashMap<String, MutableAttributeSet>();

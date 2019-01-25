@@ -1,6 +1,7 @@
 
 package com.view.system.perferenc.xml;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -117,7 +118,7 @@ public class XMLJdbcConfig {
 		format.setEncoding("UTF-8");
 		format.setIndent(true); // 设置是否缩进
 		format.setIndent("    "); // 以空格方式实现缩进
-		XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(property+ "\\config\\jdbcConfig.xml"), format);
+		XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(property+ ""+File.separator+"config"+File.separator+"jdbcConfig.xml"), format);
 		format.setNewlines(true); // 设置是否换行
 		xmlWriter.write(document);
 		xmlWriter.flush();
@@ -147,7 +148,7 @@ public class XMLJdbcConfig {
 		SAXReader saxReader = new SAXReader();
 		Document document = null;
 		try {
-			document = saxReader.read(property + "\\config\\jdbcConfig.xml");
+			document = saxReader.read(property + ""+File.separator+"config"+File.separator+"jdbcConfig.xml");
 		} catch (DocumentException e1) {
 			e1.printStackTrace();
 		}
@@ -173,7 +174,7 @@ public class XMLJdbcConfig {
 		format.setEncoding("UTF-8");
 		format.setIndent(true); // 设置是否缩进
 		format.setIndent("    "); // 以空格方式实现缩进
-		XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(property+ "\\config\\jdbcConfig.xml"), format);
+		XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(property+ ""+File.separator+"config"+File.separator+"jdbcConfig.xml"), format);
 		format.setNewlines(true); // 设置是否换行
 		xmlWriter.write(document);
 		xmlWriter.flush();
@@ -199,7 +200,7 @@ public class XMLJdbcConfig {
 		format.setEncoding("UTF-8");
 		format.setIndent(true); // 设置是否缩进
 		format.setIndent("    "); // 以空格方式实现缩进
-		XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(property+ "\\config\\jdbcConfig.xml"), format);
+		XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(property+ ""+File.separator+"config"+File.separator+"jdbcConfig.xml"), format);
 		format.setNewlines(true); // 设置是否换行
 		xmlWriter.write(xmlRoot);
 		xmlWriter.flush();

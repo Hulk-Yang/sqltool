@@ -51,7 +51,7 @@ public class Test implements IPop{
 	private DefaultTableModel listValue;
 	private JTable listTable;
 	private JTextField codeText;
-	private JFileChooser fileChooser = new JFileChooser("D:\\");
+	private JFileChooser fileChooser = new JFileChooser();
 
 	
 	private JRadioButton common;

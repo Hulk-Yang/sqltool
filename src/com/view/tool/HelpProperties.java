@@ -1,5 +1,6 @@
 package com.view.tool;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -33,7 +34,7 @@ public class HelpProperties {
     	InputStreamReader in = null;
     		properties = new Properties();
 		try {
-			in = new InputStreamReader(new FileInputStream(property + "\\config\\"+fileName),"UTF-8");
+			in = new InputStreamReader(new FileInputStream(property + ""+File.separator+"config"+File.separator+""+fileName),"UTF-8");
 			properties.load(in);
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
@@ -67,10 +68,10 @@ public class HelpProperties {
         FileOutputStream  out= null;
         OutputStreamWriter isr = null;
 		try {
-			in = new InputStreamReader(new FileInputStream(property + "\\config\\"+fileName),"UTF-8");
+			in = new InputStreamReader(new FileInputStream(property + ""+File.separator+"config"+File.separator+""+fileName),"UTF-8");
 			pps.load(in);
 			pps.remove(key);
-			out = new FileOutputStream(property + "\\config\\"+fileName);
+			out = new FileOutputStream(property + ""+File.separator+"config"+File.separator+""+fileName);
 			isr = new OutputStreamWriter(out, "UTF-8");  
 			pps.store(out, "==== after remove ====");
 			pps = getAllProperties(fileName);
@@ -121,12 +122,12 @@ public class HelpProperties {
         InputStreamReader in = null;
         OutputStream out = null;
 		try {
-			in = new InputStreamReader(new FileInputStream(property + "\\config\\"+fileName),"UTF-8"); 
+			in = new InputStreamReader(new FileInputStream(property + ""+File.separator+"config"+File.separator+""+fileName),"UTF-8"); 
         //从输入流中读取属性列表（键和元素对） 
         pps.load(in);
         //调用 Hashtable 的方法 put。使用 getProperty 方法提供并行性。  
         //强制要求为属性的键和值使用字符串。返回值是 Hashtable 调用 put 的结果。
-        out = new FileOutputStream(property + "\\config\\"+fileName);
+        out = new FileOutputStream(property + ""+File.separator+"config"+File.separator+""+fileName);
         OutputStreamWriter isr = new OutputStreamWriter(out, "UTF-8");   
 
         pps.setProperty(pKey, pValue);

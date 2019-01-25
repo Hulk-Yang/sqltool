@@ -1,6 +1,7 @@
 package com.view.system.perferenc.tree.xml;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 
@@ -44,7 +45,7 @@ public class XMLPreferencesTree implements AnalysisTree{
 		SAXReader saxReader = new SAXReader();
 		Document document = null;
 		try {
-			document = saxReader.read(property + "\\config\\preperencesTree.xml");
+			document = saxReader.read(property + ""+File.separator+"config"+File.separator+"preperencesTree.xml");
 		} catch (DocumentException e1) {
 			e1.printStackTrace();
 		}

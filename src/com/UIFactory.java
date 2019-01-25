@@ -11,6 +11,7 @@ import java.awt.MenuItem;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemListener;
 import java.awt.event.WindowListener;
+import java.io.File;
 import java.util.Vector;
 
 import javax.swing.Icon;
@@ -18,7 +19,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
-import javax.swing.JComponent;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -50,7 +50,7 @@ import main.SQLTool;
 public class UIFactory {  
  
     private static UIFactory instance;//当前工厂的一个实例  
-    private  JFileChooser fileChooser = new JFileChooser("D:\\");
+    private  JFileChooser fileChooser = new JFileChooser();
 
     //私有的构造器  
     private UIFactory(){  

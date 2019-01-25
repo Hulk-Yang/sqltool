@@ -65,7 +65,7 @@ public class ExPlanView extends JPanel{
 	private JComboBox connectionList;
 	private JRadioButton impBut;
 	private JRadioButton expBut;
-	private JFileChooser fileChooser = new JFileChooser("D:\\");
+	private JFileChooser fileChooser = new JFileChooser();
 	
 	private HashMap<String, Integer> map = new HashMap<String, Integer>();
 

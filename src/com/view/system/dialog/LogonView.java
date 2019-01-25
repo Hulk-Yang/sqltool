@@ -68,7 +68,7 @@ public class LogonView extends JDialog implements ICheckUtilParameter{
 
 
 	private JPasswordField password;
-	private JFileChooser fileChooser = new JFileChooser("D:\\");
+	private JFileChooser fileChooser = new JFileChooser();
 
 	private final int WIDTH =300;
 	private final int HEIGHT = 280;

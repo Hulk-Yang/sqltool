@@ -3,10 +3,10 @@ package com.ui.menu.xml;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -16,7 +16,6 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.JSeparator;
-import javax.swing.JTextField;
 import javax.swing.JToolBar;
 import javax.swing.SwingConstants;
 
@@ -44,7 +43,7 @@ public class XMLMenuAndToolFactory implements MenuAndTool {
 		SAXReader saxReader = new SAXReader();
 		Document document = null;
 		try {
-			document = saxReader.read(property + "\\config\\menu.xml");
+			document = saxReader.read(property + File.separator+"config"+File.separator+"menu.xml");
 
 		} catch (DocumentException e1) {
 			e1.printStackTrace();

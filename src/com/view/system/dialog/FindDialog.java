@@ -69,7 +69,7 @@ public class FindDialog extends JDialog{
 
 
 	private JPasswordField password;
-	private JFileChooser fileChooser = new JFileChooser("D:\\");
+	private JFileChooser fileChooser = new JFileChooser();
 
 	private final int WIDTH =300;
 	private final int HEIGHT = 120;

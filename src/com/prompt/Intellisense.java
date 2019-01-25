@@ -367,8 +367,8 @@ public class Intellisense extends JWindow{
 		JScrollBar scrollBar = scrollPane.getVerticalScrollBar();
 		Point p = list.indexToLocation(list.getSelectedIndex());
 		int value = scrollBar.getValue();
-		if(value+scrollBar.getHeight()<=p.y){
-			scrollBar.setValue(list.indexToLocation(list.getSelectedIndex()-10).y);
+		if(scrollBar.getHeight()!=0&&value+scrollBar.getHeight()<=p.y){
+			scrollBar.setValue(list.indexToLocation(list.getSelectedIndex()-9).y);
 		}
 	}
 	public void upRow(){

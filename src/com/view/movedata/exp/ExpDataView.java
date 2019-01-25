@@ -66,7 +66,7 @@ public class ExpDataView extends JPanel{
 	private JComboBox connectionList;
 	private JRadioButton impBut;
 	private JRadioButton expBut;
-	private JFileChooser fileChooser = new JFileChooser("D:\\");
+	private JFileChooser fileChooser = new JFileChooser();
 
 
 	public ExpDataView(){

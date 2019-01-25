@@ -1,5 +1,6 @@
 package com.ui.tree.xml;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -34,7 +35,7 @@ public class XMLAnalysisTree implements AnalysisTree{
 		SAXReader saxReader = new SAXReader();
 		Document document = null;
 		try {
-			document = saxReader.read(property + "\\config\\dataBaseTree.xml");
+			document = saxReader.read(property + ""+File.separator+"config"+File.separator+"dataBaseTree.xml");
 		} catch (DocumentException e1) {
 			e1.printStackTrace();
 		}

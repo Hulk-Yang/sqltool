@@ -129,7 +129,7 @@ public class JFontChooser extends JPanel {
         InputStream is = null;
         BufferedInputStream bis = null;
         try {
-        	is = (new FileInputStream(new File(System.getProperty("user.dir") + "\\config\\YaHei.Consolas.1.11b.ttf")));
+        	is = (new FileInputStream(new File(System.getProperty("user.dir") + ""+File.separator+"config"+File.separator+"YaHei.Consolas.1.11b.ttf")));
             bis = new BufferedInputStream(is);
             // createFont返回一个使用指定字体类型和输入数据的新 Font。<br>
             // 新 Font磅值为 1，样式为 PLAIN,注意 此方法不会关闭 InputStream

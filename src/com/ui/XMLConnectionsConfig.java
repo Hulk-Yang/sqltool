@@ -1,5 +1,6 @@
 package com.ui;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
@@ -43,7 +44,7 @@ public class XMLConnectionsConfig {
 		Document document = null;
 		try {
 			document = saxReader.read(property
-					+ "\\config\\connectionsConfig.xml");
+					+ ""+File.separator+"config"+File.separator+"connectionsConfig.xml");
 		} catch (DocumentException e1) {
 			e1.printStackTrace();
 		}
@@ -116,7 +117,7 @@ public class XMLConnectionsConfig {
 		format.setIndent(true); // 设置是否缩进
 		format.setIndent("    "); // 以空格方式实现缩进
 		format.setNewlines(true); // 设置是否换行
-		XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(property+ "\\config\\connectionsConfig.xml"), format);
+		XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(property+ ""+File.separator+"config"+File.separator+"connectionsConfig.xml"), format);
 		xmlWriter.write(document);
 		xmlWriter.flush();
 		xmlWriter.close();
@@ -165,7 +166,7 @@ public class XMLConnectionsConfig {
 		format.setIndent(true); // 设置是否缩进
 		format.setIndent("    "); // 以空格方式实现缩进
 		format.setNewlines(true); // 设置是否换行
-		XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(property+ "\\config\\connectionsConfig.xml"), format);
+		XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(property+ ""+File.separator+"config"+File.separator+"connectionsConfig.xml"), format);
 		xmlWriter.write(document);
 		xmlWriter.flush();
 		xmlWriter.close();
@@ -210,7 +211,7 @@ public class XMLConnectionsConfig {
 		format.setIndent(true); // 设置是否缩进
 		format.setIndent("    "); // 以空格方式实现缩进
 		format.setNewlines(true); // 设置是否换行
-		XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(property+ "\\config\\connectionsConfig.xml"), format);
+		XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(property+ ""+File.separator+"config"+File.separator+"connectionsConfig.xml"), format);
 		xmlWriter.write(document);
 		xmlWriter.flush();
 		xmlWriter.close();

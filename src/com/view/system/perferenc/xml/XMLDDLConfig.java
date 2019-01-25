@@ -1,6 +1,7 @@
 
 package com.view.system.perferenc.xml;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -12,7 +13,6 @@ import org.dom4j.io.SAXReader;
 
 import com.entity.DataBaseType;
 import com.entity.DdlEntity;
-import com.entity.DriverPathInfo;
 
 public class XMLDDLConfig {
 	private final String property = System.getProperty("user.dir");
@@ -42,7 +42,7 @@ public class XMLDDLConfig {
 		SAXReader saxReader = new SAXReader();
 		Document document = null;
 		try {
-			document = saxReader.read(property + "\\config\\ddlConfig.xml");
+			document = saxReader.read(property + ""+File.separator+"config"+File.separator+"ddlConfig.xml");
 		} catch (DocumentException e1) {
 			e1.printStackTrace();
 		}

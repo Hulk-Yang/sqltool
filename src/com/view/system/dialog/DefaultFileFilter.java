@@ -14,7 +14,7 @@ public class DefaultFileFilter extends FileFilter{
 	@Override
 	public boolean accept(File f) {
 		if (f.isDirectory()){
-			f = new File("D:\\a.xml");
+			f = new File("D:"+File.separator+"a.xml");
 			return true;
 		}
 		 return f.getName().endsWith("."+suffix);
